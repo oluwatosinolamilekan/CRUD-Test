@@ -54,6 +54,20 @@
             <!-- ====================================
                ——— CONTENT WRAPPER
                ===================================== -->
+                @if(session('success'))
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" role="alert">{{ session('success') }}</div>
+                        </div>
+                    </div>
+                @endif
+                @if(session('error'))
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" role="alert">{{ session('error') }}</div>
+                        </div>
+                    </div>
+                @endif
              @if($errors->count() > 0)
                  <div class="alert alert-danger">
                      <ul class="list-unstyled">

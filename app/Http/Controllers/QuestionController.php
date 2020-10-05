@@ -20,7 +20,7 @@ class QuestionController extends Controller
         return view('questions.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreQuestionRequest $request)
     {
         $question = Question::create($request->all());
 

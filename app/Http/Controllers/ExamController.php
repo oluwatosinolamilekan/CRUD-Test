@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exam;
 use Illuminate\Http\Request;
+use App\Models\QuestionCategory;
 
 class ExamController extends Controller
 {
@@ -15,7 +16,7 @@ class ExamController extends Controller
 
     public function create()
     {
-        $categories = Category::all()->pluck('name', 'id');
+        $categories = QuestionCategory::all()->pluck('name', 'id');
         return view('exams.create', compact('categories'));
     }
 

@@ -43,13 +43,23 @@
                                </a>
                             </div>
                          </div>
+                         @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                          <div class="card-body px-5 pb-5 pt-0">
                             <form method="POST" action="{{ route('login') }}">
                                    @csrf
                                <div class="row">
                                   <div class="form-group col-md-12 mb-4">
                                      <input type="email" class="form-control input-lg" id="email" aria-describedby="emailHelp"
-                                        placeholder="email"  name="email" value="oluwatosinolamilekan@gmail.com">
+                                        placeholder="email"  name="email" value="admin@admin.com">
                                   </div>
                                   <div class="form-group col-md-12 ">
                                      <input type="password" name="password" class="form-control input-lg" id="password" placeholder="Password" value="password"> 

@@ -14,6 +14,8 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             // Authentication passed...
             return redirect()->intended('question.index');
+        } else {
+            return redirect()->back()->with('error', 'incorrrect Password');
         }
     }
 

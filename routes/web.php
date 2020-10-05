@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('partials.login');
 })->name('login');
 
-Route::post('login', [LoginController::class, 'index'])->name('login');
+Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::prefix('admin')->group(function () {
     Route::prefix('questions')->group(function () {

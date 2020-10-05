@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeed extends Seeder
 {
@@ -18,11 +20,10 @@ class UserSeed extends Seeder
                 'id'             => 1,
                 'name'           => 'Admin',
                 'email'          => 'admin@admin.com',
-                'password'       => '$2y$10$hTWBFLnkgCXPvcPy5gTAOOmsOh.ZDGsv3uLtKlXqVjnmcP5h8Ig7O',
+                'password'       =>  Hash::make('password'),
                 'remember_token' => null,
             ],
         ];
-
         User::insert($users);
     }
 }

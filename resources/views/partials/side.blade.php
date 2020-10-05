@@ -12,7 +12,7 @@
          <!-- sidebar menu -->
          <ul class="nav sidebar-inner" id="sidebar-menu">
             <li
-               class="active"
+               class=""
                >
                <a class="sidenav-item-link" href="{{ route('exam.index') }}">
                <i class="mdi mdi-briefcase-account-outline"></i>
@@ -35,9 +35,9 @@
             </li>
             <li
                >
-               <a class="sidenav-item-link" href="{{ route('category.index') }}">
+               <a class="sidenav-item-link" href="{{ route('question-option.index') }}">
                <i class="mdi mdi-briefcase-account-outline"></i>
-               <span class="nav-text">Categories</span>
+               <span class="nav-text">Question Option</span>
                </a>
             </li>
          </ul>

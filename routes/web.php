@@ -31,7 +31,7 @@ Route::prefix('admin')->group(function () {
         Route::post('store', [QuestionController::class, 'store'])->name('question.store');
         Route::get('edit/{id}', [QuestionController::class, 'edit'])->name('question.edit');
         Route::put('update/{id}', [QuestionController::class, 'update'])->name('question.update');
-        Route::delete('delete/{id}', [QuestionController::class, 'delete'])->name('question.delete');
+        Route::delete('delete/{id}', [QuestionController::class, 'delete'])->name('question.destroy');
     });
 
     Route::prefix('exams')->group(function () {
@@ -40,16 +40,16 @@ Route::prefix('admin')->group(function () {
         Route::post('store', [ExamController::class, 'store'])->name('exam.store');
         Route::get('edit/{id}', [ExamController::class, 'edit'])->name('exam.edit');
         Route::put('update/{id}', [ExamController::class, 'update'])->name('exam.update');
-        Route::delete('delete/{id}', [ExamController::class, 'delete'])->name('exam.delete');
+        Route::delete('delete/{id}', [ExamController::class, 'delete'])->name('exam.destroy');
     });
 
     Route::prefix('categories')->group(function () {
-        Route::get('index', [QuestionCategoryController::class, 'index'])->name('category.index');
-        Route::get('create', [QuestionCategoryController::class, 'create'])->name('category.create');
-        Route::post('store', [QuestionCategoryController::class, 'store'])->name('category.store');
-        Route::get('edit/{id}', [QuestionCategoryController::class, 'edit'])->name('category.edit');
-        Route::put('update/{id}', [QuestionCategoryController::class, 'update'])->name('category.update');
-        Route::delete('delete/{id}', [QuestionCategoryController::class, 'delete'])->name('category.delete');
+        Route::get('index', [QuestionCategoryController::class, 'index'])->name('categories.index');
+        Route::get('create', [QuestionCategoryController::class, 'create'])->name('categories.create');
+        Route::post('store', [QuestionCategoryController::class, 'store'])->name('categories.store');
+        Route::get('edit/{id}', [QuestionCategoryController::class, 'edit'])->name('categories.edit');
+        Route::put('update/{id}', [QuestionCategoryController::class, 'update'])->name('categories.update');
+        Route::delete('delete/{id}', [QuestionCategoryController::class, 'delete'])->name('categories.destroy');
     });
 
     Route::prefix('question-options')->group(function () {
@@ -58,6 +58,6 @@ Route::prefix('admin')->group(function () {
         Route::post('store', [QuestionCategoryController::class, 'store'])->name('question-option.store');
         Route::get('edit/{id}', [QuestionCategoryController::class, 'edit'])->name('question-option.edit');
         Route::put('update/{id}', [QuestionCategoryController::class, 'update'])->name('question-option.update');
-        Route::delete('delete/{id}', [QuestionCategoryController::class, 'delete'])->name('question-option.delete');
+        Route::delete('delete/{id}', [QuestionCategoryController::class, 'delete'])->name('question-option.destroy');
     });
 });

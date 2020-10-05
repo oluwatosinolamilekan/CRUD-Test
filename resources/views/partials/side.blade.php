@@ -28,11 +28,11 @@
             </li>
              <li
                >
-               <a class="sidenav-item-link" href="{{ route('category.index') }}">
+               <a class="sidenav-item-link" href="{{ route('categories.index') }}">
                <i class="mdi mdi-briefcase-account-outline"></i>
                <span class="nav-text">Categories</span>
                </a>
-            </li>
+         </li>
             <li
                >
                <a class="sidenav-item-link" href="{{ route('question-option.index') }}">

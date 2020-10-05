@@ -16,12 +16,12 @@ class QuestionCategorySeed extends Seeder
     {
         QuestionCategory::create([
             'name' => 'Technical'
-        ])
+        ]);
         QuestionCategory::create([
             'name' => 'Aptitude'
-        ])
+        ]);
         QuestionCategory::create([
             'name' => 'Logical'
-        ])
+        ]);
     }
 }

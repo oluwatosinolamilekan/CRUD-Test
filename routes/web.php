@@ -22,6 +22,7 @@ Route::get('/', function () {
 })->name('login');
 
 Route::post('login', [LoginController::class, 'authenticate'])->name('login');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->group(function () {
     Route::prefix('questions')->group(function () {

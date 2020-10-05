@@ -6,16 +6,14 @@
                 <div class="card card-default">
                   <div class="px-6 py-4">
                     <p>
-                        EnterPrise 
-                        <span class="text-secondary text-capitalize"> Bookings </span> 
+                        <span class="text-secondary text-capitalize"> Questions </span> 
                     </p>
                   </div>
                 </div>
                  <div class="card card-default">
                      <div class="card-header">
-                        <h2>Bookings</h2>
-                        <a class="btn mdi mdi-code-tags" data-toggle="collapse" href="#collapse-data-tables" role="button" aria-expanded="false"
-                           aria-controls="collapse-data-tables"> </a>
+                        <h2>Question</h2>
+                        <a class="btn mdi mdi-code-tags" href="{{ route('question.create') }}"> Create Question</a>
                      </div>
                      <div class="card-body">
                         <table id="productsTable" class="table table-hover table-product" style="width:100%">

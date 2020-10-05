@@ -11,7 +11,7 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::with('options')->get();
-        return view('questions.index');
+        return view('questions.index', compact('questions'));
     }
 
     public function create()
